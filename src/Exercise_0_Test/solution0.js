@@ -1,3 +1,4 @@
+"use strict";
 /*
 
 Welcome to:
@@ -21,35 +22,26 @@ Exercise:
     Given the data, define the interface "User" and use it accordingly.
 
 */
-
-export default () => {
-  type User = {
-    name: string;
-    age: number;
-    occupation: string;
-  };
-  const users: User[] = [
-    {
-      name: "Max Mustermann",
-      age: 25,
-      occupation: "Chimney sweep",
-    },
-    {
-      name: "Kate Müller",
-      age: 23,
-      occupation: "Astronaut",
-    },
-  ];
-
-  function logPerson(user: User): void {
-    console.log(` - ${user.name}, ${user.age}`);
-  }
-
-  console.log("Users:");
-  users.forEach(logPerson);
-
-  /* In case if you are stuck:
+exports.__esModule = true;
+exports["default"] = (function () {
+    var users = [
+        {
+            name: 'Max Mustermann',
+            age: 25,
+            occupation: 'Chimney sweep'
+        },
+        {
+            name: 'Kate Müller',
+            age: 23
+        }
+    ];
+    function logPerson(user) {
+        console.log(" - ".concat(user.name, ", ").concat(user.age));
+    }
+    console.log('Users:');
+    users.forEach(logPerson);
+    /* In case if you are stuck:
     
     // https://www.typescriptlang.org/docs/handbook/interfaces.html#introduction
     */
-};
+});
